@@ -1,0 +1,35 @@
+@import "../../../styles/variables.scss";
+
+.storeCard {
+  border: 1px solid $dark;
+  border-radius: 16px;
+  width: 312px;
+  height: 80px;
+
+  a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 24px;
+  }
+
+  &__text {
+    width: 70%;
+    color: $lightGrey;
+    font-family: $NotoSan;
+
+    p {
+      font-size: $smFont;
+    }
+
+    h5 {
+      font-size: $mdFont;
+      font-weight: bold;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

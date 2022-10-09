@@ -1,0 +1,11 @@
+@import "../../../styles/variables.scss";
+
+.iconsWrapper {
+  display: flex;
+  gap: 8px;
+  padding: 23px 0;
+
+  @include respond-to(md) {
+    padding-bottom: 0;
+  }
+}

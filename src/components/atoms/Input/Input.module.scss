@@ -1,0 +1,30 @@
+@import "../../../styles/variables.scss";
+
+.inputWrapper {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background-color: $light;
+  border: 1px solid $dark;
+  border-radius: 8px;
+  gap: 20px;
+  font-family: $NotoSan;
+  margin: 7px 0 16px;
+
+  input {
+    width: 100%;
+    border: none;
+    font-size: $smFont;
+    color: $dark;
+
+    &::placeholder {
+      color: $darkGrey;
+    }
+  }
+
+  @include respond-to(lg) {
+    input {
+      font-size: $mdFont;
+    }
+  }
+}

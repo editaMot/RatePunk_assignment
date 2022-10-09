@@ -1,0 +1,79 @@
+@import "../../../../styles/variables.scss";
+
+.formSection {
+  width: 100%;
+  padding: 0 16px;
+  margin-bottom: 50px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    background-color: $lightGrey;
+    border: 1px solid $dark;
+    border-radius: 16px;
+    padding: 32px 16px;
+
+    &__text {
+      &__hide {
+        display: none;
+      }
+
+      &__show {
+        display: block;
+      }
+
+      form {
+        &.hide {
+          display: none;
+        }
+
+        span {
+          color: $error;
+        }
+      }
+
+      h2 {
+        font-family: $CaveatBrush;
+        font-weight: normal;
+        font-size: $lgFont;
+      }
+
+      p {
+        font-family: $NotoSan;
+        font-size: $smFont;
+        color: $dark;
+        line-height: $mdLineSpacing;
+        margin: 24px 0;
+      }
+    }
+
+    span {
+      color: $darkGrey;
+      font-family: $NotoSan;
+      font-size: $smFont;
+      margin: 70px 0 0;
+    }
+  }
+
+  @include respond-to(lg) {
+    width: 50%;
+    padding: 0;
+
+    &__content {
+      justify-content: space-between;
+      height: 800px;
+      padding: 64px;
+
+      &__text {
+        h2 {
+          font-size: $xlFont;
+        }
+
+        p {
+          font-size: $mdFont;
+          margin: 32px 0 40px;
+        }
+      }
+    }
+  }
+}

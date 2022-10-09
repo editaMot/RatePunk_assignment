@@ -1,0 +1,51 @@
+// Fonts imports
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+@import url("http://fonts.cdnfonts.com/css/gadugi?styles=66186,66187");
+
+// Fonts variables
+$NotoSan: "Noto Sans", sans-serif;
+$CaveatBrush: "Caveat Brush", cursive;
+$Gadugi: "Gadugi", sans-serif;
+
+// Colors
+$light: #ffffff;
+$dark: #1f343e;
+$primary: #f8cc5d;
+$secondary: #4eb3e3;
+$darkGrayishBlue: #434a54;
+$lighterGrayishBlue: #45565e;
+$darkBlue: #2072f3;
+$lightBlue: #18bffb;
+$error: #ed6f82;
+$lightGrey: #f8f4f9;
+$darkGrey: #6d7a80;
+
+// Font size
+$smFont: 1em;
+$mdFont: 1.25em;
+$lgFont: 2em;
+$xlFont: 3em;
+
+// Line spacing
+$smLineSpacing: 1em;
+$mdLineSpacing: 1.5em;
+$lgLineSpacing: 2em;
+$xlLineSpacing: 3em;
+
+// mixins
+@mixin respond-to($points) {
+  @if $points == sm {
+    @media (min-width: 767px) {
+      @content;
+    }
+  } @else if $points == md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $points == lg {
+    @media (min-width: 1120px) {
+      @content;
+    }
+  }
+}

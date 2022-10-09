@@ -1,0 +1,140 @@
+@import "../../../styles/variables.scss";
+
+.header {
+  background-color: $light;
+  width: 100%;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $dark;
+
+    &__logo {
+      padding: 12px 16px;
+    }
+
+    span {
+      padding: 12px 16px;
+      cursor: pointer;
+    }
+
+    &__nav {
+      width: 100%;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 30px 0px 20px 0px;
+
+        &.hideMenu {
+          display: none;
+        }
+
+        li {
+          width: 100%;
+          list-style: none;
+          line-height: $xlLineSpacing;
+          padding: 0 16px;
+          border: 2px solid $light;
+
+          a {
+            text-decoration: none;
+            font-size: $mdFont;
+            font-family: $Gadugi;
+            color: $darkGrayishBlue;
+            line-height: $mdLineSpacing;
+          }
+
+          a:hover {
+            cursor: pointer;
+          }
+        }
+
+        li:hover {
+          border: 2px solid $secondary;
+        }
+      }
+    }
+  }
+
+  @include respond-to(sm) {
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 80px;
+      border: none;
+      padding-bottom: 0;
+
+      span {
+        display: none;
+      }
+
+      &__logo {
+        margin-bottom: 0;
+      }
+
+      &__nav {
+        width: 70%;
+
+        ul {
+          gap: 0;
+          justify-content: end;
+          margin: 0;
+
+          &.hideMenu {
+            display: flex;
+          }
+
+          li {
+            width: auto;
+            padding: 0;
+            line-height: $lgLineSpacing;
+            border: none;
+          }
+
+          li:hover {
+            border: none;
+          }
+
+          a {
+            font-family: $NotoSan;
+            padding: 11px 16px 10px 16px;
+          }
+
+          a:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    &__content {
+      margin: 0 auto;
+      max-width: 1120px;
+
+      &__nav {
+        width: 50%;
+      }
+    }
+  }
+
+  @include respond-to(lg) {
+    &__content {
+      padding: 0;
+
+      &__logo {
+        padding: 0;
+      }
+
+      &__nav {
+        width: 45%;
+      }
+    }
+  }
+}

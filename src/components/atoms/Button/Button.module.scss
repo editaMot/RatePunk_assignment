@@ -1,0 +1,13 @@
+@import "../../../styles/variables.scss";
+
+.button {
+  width: 100%;
+  background-color: $secondary;
+  padding: 17px 0;
+  color: $light;
+  font-family: $NotoSan;
+  font-size: $smFont;
+  border: 1px solid $dark;
+  border-radius: 8px;
+  font-weight: bold;
+}

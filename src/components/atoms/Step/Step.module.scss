@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+
+.stepWrapper {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  max-width: 448px;
+  margin: 0 auto;
+  font-family: $NotoSan;
+
+  &__text {
+    text-align: center;
+    margin-top: 30px;
+
+    span {
+      color: $secondary;
+      font-weight: bold;
+      letter-spacing: 1.6px;
+      font-size: $mdFont;
+      line-height: $mdLineSpacing;
+    }
+
+    h3 {
+      font-family: $CaveatBrush;
+      font-size: $lgFont;
+      font-weight: normal;
+      color: $dark;
+      margin: 16px 0;
+    }
+
+    p {
+      font-size: $mdFont;
+      color: $dark;
+      line-height: $mdLineSpacing;
+    }
+  }
+
+  @include respond-to(md) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+
+    &__text {
+      text-align: left;
+      width: 56%;
+      margin-top: 0;
+    }
+  }
+}

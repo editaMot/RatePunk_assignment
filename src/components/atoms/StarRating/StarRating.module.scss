@@ -1,0 +1,19 @@
+@import "../../../styles/variables.scss";
+
+.starRating {
+  display: flex;
+  align-items: center;
+  font-family: $NotoSan;
+  font-size: $smFont;
+  margin: 15px 0 0 15px;
+
+  p {
+    color: $light;
+    margin-left: 16px;
+  }
+
+  @include respond-to(lg) {
+    font-size: $mdFont;
+    margin: 0 0 0 15px;
+  }
+}

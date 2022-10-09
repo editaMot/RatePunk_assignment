@@ -1,0 +1,121 @@
+@import "../../../styles/variables.scss";
+
+.footer {
+  background-color: $lightGrey;
+  width: 100%;
+  font-family: $NotoSan;
+  line-height: $mdLineSpacing;
+  font-size: $smFont;
+  padding: 48px 32px;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__about {
+      width: 100%;
+
+      p {
+        color: $dark;
+        padding: 32px 0 48px;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+
+      &__links {
+        width: 100%;
+
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          padding: 23px 0px 32px;
+
+          a {
+            text-decoration: none;
+            color: $dark;
+            &:hover {
+              color: $secondary;
+            }
+          }
+        }
+      }
+
+      &__connect {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &__contact {
+          display: flex;
+          flex-direction: column;
+
+          &__email {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 28px 0 42px;
+          }
+        }
+
+        &__social {
+          padding-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  span {
+    color: $darkGrey;
+    font-size: $smFont;
+  }
+
+  @include respond-to(lg) {
+    padding: 48px 16px;
+
+    &__content {
+      margin: 0 auto;
+      max-width: 1120px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &__about {
+        width: 50%;
+      }
+
+      &__right {
+        width: 35%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__links {
+          width: 45%;
+
+          ul {
+            padding-bottom: 0px;
+          }
+        }
+
+        &__connect {
+          width: 45%;
+          justify-content: space-between;
+
+          &__social {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+
+    span {
+      position: relative;
+      bottom: 20px;
+    }
+  }
+}
